@@ -7,6 +7,7 @@ import org.springframework.context.ApplicationContext;
 import com.samcancode.sfgdi.autowiring.ConstructorWiring;
 import com.samcancode.sfgdi.autowiring.FieldWiring;
 import com.samcancode.sfgdi.autowiring.SetterWiring;
+import com.samcancode.sfgdi.primarybean.AnotherInterface;
 
 @SpringBootApplication
 public class SfgDiApplication {
@@ -30,6 +31,11 @@ public class SfgDiApplication {
 		
 		ConstructorWiring construct = (ConstructorWiring) ctx.getBean("constructorWiring");
 		construct.wireUp();
+		
+		System.out.println("\n Primary Bean demo....");
+		AnotherInterface another = ctx.getBean(AnotherInterface.class);
+		System.out.println(another.sayHello());
+		
 		
 		
 	}
