@@ -7,6 +7,7 @@ import org.springframework.context.ApplicationContext;
 import com.samcancode.sfgdi.autowiring.ConstructorWiring;
 import com.samcancode.sfgdi.autowiring.FieldWiring;
 import com.samcancode.sfgdi.autowiring.SetterWiring;
+import com.samcancode.sfgdi.pet.PetController;
 import com.samcancode.sfgdi.primarybean.AnotherInterface;
 import com.samcancode.sfgdi.profile.ProfileInterface;
 
@@ -40,6 +41,10 @@ public class SfgDiApplication {
 		System.out.println("\n Profile Bean demo....");
 		ProfileInterface profile = ctx.getBean(ProfileInterface.class);
 		System.out.println(profile.sayHello());
+		
+		System.out.println("\n Pet Service Profile Bean demo....");
+		PetController petCtrl = ctx.getBean(PetController.class);
+		System.out.println(petCtrl.whichPetIsTheBest());
 		
 		
 		
