@@ -10,8 +10,8 @@ public class SfgDiApplication {
 	public static void main(String[] args) {
 		ApplicationContext ctx = SpringApplication.run(SfgDiApplication.class, args);
 		
-		MyComponent myComponent = ctx.getBean(MyComponent.class);
-		System.out.println(myComponent.sayHello());
+		MyInterface myIntf = ctx.getBean(MyInterface.class);
+		System.out.println(myIntf.sayHello());
 	}
 
 }
