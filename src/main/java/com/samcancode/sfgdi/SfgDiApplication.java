@@ -8,6 +8,7 @@ import com.samcancode.sfgdi.autowiring.ConstructorWiring;
 import com.samcancode.sfgdi.autowiring.FieldWiring;
 import com.samcancode.sfgdi.autowiring.SetterWiring;
 import com.samcancode.sfgdi.primarybean.AnotherInterface;
+import com.samcancode.sfgdi.profile.ProfileInterface;
 
 @SpringBootApplication
 public class SfgDiApplication {
@@ -35,6 +36,10 @@ public class SfgDiApplication {
 		System.out.println("\n Primary Bean demo....");
 		AnotherInterface another = ctx.getBean(AnotherInterface.class);
 		System.out.println(another.sayHello());
+		
+		System.out.println("\n Profile Bean demo....");
+		ProfileInterface profile = ctx.getBean(ProfileInterface.class);
+		System.out.println(profile.sayHello());
 		
 		
 		
