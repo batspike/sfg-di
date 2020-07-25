@@ -7,6 +7,7 @@ import org.springframework.context.ApplicationContext;
 import com.samcancode.sfgdi.autowiring.ConstructorWiring;
 import com.samcancode.sfgdi.autowiring.FieldWiring;
 import com.samcancode.sfgdi.autowiring.SetterWiring;
+import com.samcancode.sfgdi.beenlife.LifeCycleDemoBean;
 import com.samcancode.sfgdi.pet.PetController;
 import com.samcancode.sfgdi.primarybean.AnotherInterface;
 import com.samcancode.sfgdi.profile.ProfileInterface;
@@ -17,6 +18,8 @@ public class SfgDiApplication {
 	public static void main(String[] args) {
 		ApplicationContext ctx = SpringApplication.run(SfgDiApplication.class, args);
 		
+		System.out.println("\n\n===============================================\n");
+
 		MyInterface myIntf = (MyInterface) ctx.getBean("moreComponent");
 		System.out.println(myIntf.sayHello());
 		
@@ -46,8 +49,10 @@ public class SfgDiApplication {
 		PetController petCtrl = ctx.getBean(PetController.class);
 		System.out.println(petCtrl.whichPetIsTheBest());
 		
+		System.out.println("\n===============================================\n");
 		
-		
+		LifeCycleDemoBean bean = ctx.getBean(LifeCycleDemoBean.class);
+		bean.doSomething();
 	}
 
 }
