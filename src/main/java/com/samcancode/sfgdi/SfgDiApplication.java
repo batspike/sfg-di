@@ -8,6 +8,7 @@ import com.samcancode.sfgdi.autowiring.ConstructorWiring;
 import com.samcancode.sfgdi.autowiring.FieldWiring;
 import com.samcancode.sfgdi.autowiring.SetterWiring;
 import com.samcancode.sfgdi.beenlife.LifeCycleDemoBean;
+import com.samcancode.sfgdi.examplebeans.FakeDataSource;
 import com.samcancode.sfgdi.pet.PetController;
 import com.samcancode.sfgdi.primarybean.AnotherInterface;
 import com.samcancode.sfgdi.profile.ProfileInterface;
@@ -53,6 +54,15 @@ public class SfgDiApplication {
 		
 		LifeCycleDemoBean bean = ctx.getBean(LifeCycleDemoBean.class);
 		bean.doSomething();
+		
+		System.out.println("\n===============================================\n");
+
+		FakeDataSource fakeDataSource = ctx.getBean(FakeDataSource.class);
+		System.out.println("fakeDataSource.getUser(): " + fakeDataSource.getUser());
+		
+		System.out.println("\n===============================================\n");
+		
+		
 	}
 
 }
