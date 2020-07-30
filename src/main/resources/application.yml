@@ -1,0 +1,7 @@
+# Spring will read both application.properties and application.yml files on start up
+guru:
+  jms:
+    username: JMS Username
+    password: nopassword
+    url: Some URL
+    

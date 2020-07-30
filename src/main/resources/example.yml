@@ -1,0 +1,36 @@
+# this is a comment
+name: John
+
+# an array of names
+names:
+    - John
+    - Paul
+    - Ringo #comment
+    
+pound_sign: "#"
+
+book:
+    author: Joe Buck
+    publisher: random house
+    
+truth: yes
+
+another_truth: True
+
+more_true: true
+
+false: no # No, false, FALSE
+
+string_val: 'This is a string'
+
+colon_string: "my nice string"
+
+include_new_lines: |
+  line 1
+  line 2
+  
+ignore_new_lines: >
+  this is
+  just one long
+  string
+  
