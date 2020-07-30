@@ -5,3 +5,9 @@ guru:
     password: nopassword
     url: Some URL
     
+--- # file separator
+spring:
+  profiles: de
+guru:
+  jms:
+    username: JMS in German under 'de' profile
